@@ -27,7 +27,8 @@ class AppMirror extends React.Component{
 	}
 
 	handleMarkdownChange(evt) {
-		this.setState({markdownSrc: evt.target.value})
+		console.log(evt)
+		this.setState({markdownSrc: evt})
 	}
 
 	handleControlsChange(mode) {
@@ -51,7 +52,7 @@ class AppMirror extends React.Component{
 				<div className="result-pane">
 					<Markdown
 						className="result"
-						source={initialSource}
+						source={this.state.markdownSrc}
 						//skipHtml={this.state.htmlMode === 'skip'}
 						escapeHtml={false}
 						//renderers={{code: CodeBlock}}

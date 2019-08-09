@@ -5,15 +5,19 @@
   "main": "karma.conf.js",
   "dependencies": {
     "axios": "^0.9.1",
+    "body-parse": "^0.1.0",
     "bootstrap": "^4.3.1",
     "express": "^4.13.4",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-addons-test-utils": "^15.6.2",
     "react-codemirror": "^1.0.0",
     "react-dom": "^16.8.6",
     "react-markdown": "^4.1.0",
     "react-router": "^5.0.1",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "rimraf": "^2.6.3"
   },
   "scripts": {
     "test": "mocha",

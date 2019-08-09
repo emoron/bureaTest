@@ -7,11 +7,11 @@ class LeftMenu extends React.Component {
 
   componentDidMount(){
 
-    fetch('/api/files')
+    fetch('/list')
     .then(res => res.json())
     .then(files => {
       console.log(files);
-        this.setState({ emailUser:files.list });
+        this.setState({ files:files });
 
     })
     .catch(error => {
@@ -22,9 +22,7 @@ class LeftMenu extends React.Component {
     return(
       <nav className="navbar navbar-expand-sm navbar-default">
           <div className="navbar-header">
-            <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="icon-menu" style={{color:"white"}}></span>
-            </button>
+
             <a className="navbar-brand" href="./" style={{zIndex:200, borderBottom:0}}>
               <img src="/assets/images/image1.png" alt="Logo"/>
             </a>

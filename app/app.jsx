@@ -1,7 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-import HeaderWin from "./components/header";
+import ListFiles from "./components/listFiles";
+
 import LeftMenu from "./components/leftMenu";
 //import RightPanel from './dashboard/rightPanel';
 // import Demo from "./src/demo"
@@ -14,6 +15,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AppMirror from './components/appMirror'
 
-
+ReactDOM.render(<ListFiles />, document.getElementById("listFiles"));
+//ReactDOM.render(<LeftMenu />,document.getElementById('app'));
 ReactDOM.render(<AppMirror />, document.getElementById('main'));
-ReactDOM.render(<LeftMenu />,document.getElementById('app'));

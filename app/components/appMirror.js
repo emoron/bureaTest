@@ -6,14 +6,32 @@ import Editor from '../src/editor'
 
 require('codemirror/mode/markdown/markdown');
 
-const initialSource = `
-# Live demo
+const initialSource = `# Live demo
 
 Changes are automatically rendered as you type.
+
+* Implements [GitHub Flavored Markdown](https://github.github.com/gfm/)
+* Renders actual, "native" React DOM elements
+* Allows you to escape or skip HTML (try toggling the checkboxes above)
+* If you escape or skip the HTML, no \`dangerouslySetInnerHTML\` is used! Yay!d
 `
 
 
 class AppMirror extends React.Component{
+
+	componentDidMount(){
+
+    fetch('/initial')
+    .then(res => res.json())
+    .then(file => {
+      console.log(file);
+        this.setState({ markdownSrc:file.document });
+
+    })
+    .catch(error => {
+      console.log("Err",error);
+    });
+  }
 
 	constructor(props){
 		super(props)
@@ -27,7 +45,7 @@ class AppMirror extends React.Component{
 	}
 
 	handleMarkdownChange(evt) {
-		console.log(evt)
+		//console.log(evt)
 		this.setState({markdownSrc: evt})
 	}
 
@@ -50,8 +68,7 @@ class AppMirror extends React.Component{
 				</div>
 
 				<div className="result-pane">
-					<Markdown
-						className="result"
+					<Markdown className="result"
 						source={this.state.markdownSrc}
 						//skipHtml={this.state.htmlMode === 'skip'}
 						escapeHtml={false}

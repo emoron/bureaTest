@@ -25,6 +25,7 @@ app.use(function (req, res, next){
 
 app.use(express.static('public'));
 app.use('/list',require('./routes/files'))
+app.use('/initial',require('./routes/initial'))
 app.use('/new',require('./routes/new'))
 app.use('/open',require('./routes/open'))
 app.use('/save',require('./routes/save'))

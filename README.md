@@ -1,1 +1,6 @@
-# bureaTest
+# Run Project
+
+```
+npm install
+npm start
+```

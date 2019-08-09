@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarkDownEditor</title>
+  <meta name="description" content="Editor">
+  <link rel='shortcut icon' href='/assets/images/flaticon.png' type='image/x-icon' />
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="example.css">
+  <style>
+    #contact > .container-fluid > .row > div { border: 1px dashed #ddd;}
+
+    #contact > .container-fluid > .row > div:first-child { padding-right: 0;}
+
+    #contact > .container-fluid > .row > div:last-child { padding-left: 0;}
+  </style>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Actions </div>
+        <div class="list-group list-group-flush">
+          <a href="#" class="list-group-item list-group-item-action bg-light">New</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Save</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Drop</a>
+
+        </div>
+      </div>
+
+      <div id="page-content-wrapper">
+          <section id="contact">
+            <div class="container-fluid">
+
+                  <div id="main"></div>
+
+            </div>
+          </section>
+
+      </div>
+      <!-- /#content-wrapper -->
+  </div>
+  <script src="bundle.js"></script>
+</body>
+
+</html>
